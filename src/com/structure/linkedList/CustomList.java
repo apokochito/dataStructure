@@ -2,7 +2,7 @@ package com.structure.linkedList;
 
 import java.util.ArrayList;
 
-public class List {
+public class CustomList {
 
     private Node head = null;
 
