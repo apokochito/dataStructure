@@ -2,10 +2,8 @@ package com.structure;
 
 import com.structure.linkedList.Car;
 import com.structure.linkedList.CustomList;
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.StringStack;
-
-import java.util.*;
-import java.util.concurrent.SynchronousQueue;
+import com.structure.queue.CustomQueue;
+import com.structure.stack.CustomStack;
 
 public class Main {
 
@@ -28,19 +26,41 @@ public class Main {
         System.out.println(customList.countCars()); //six
         System.out.println(customList.getCars());
 
-        //QUEUE
-        Queue queue = new PriorityQueue();
-        Queue queue1 = new ArrayDeque();
-        Queue queue2 = new LinkedList();
-        Queue queue3 = new SynchronousQueue();
+        /*
+         QUEUE
+            FIFO (first in, first out), for example a queue of process that your pc has
+            JAVA
+                Queue queue = new PriorityQueue();
+                Queue queue1 = new ArrayDeque();
+                Queue queue2 = new LinkedList();
+                Queue queue3 = new SynchronousQueue();
+         */
+        CustomQueue myQueue = new CustomQueue(5);
+        myQueue.enqueue(4);
+        myQueue.enqueue(12);
+        myQueue.enqueue(50);
+        System.out.println("TOP value: " + myQueue.getTop());
+        myQueue.dequeue();
+        myQueue.enqueue(20);
+        System.out.println("TOP value: " + myQueue.getTop());
+        myQueue.printQueue();
 
+        /*
+         STACK
+            LIFO (last in, first out), for example a stack of plates.
+            JAVA
+                Stack stack = new Stack();
+                Stack stack1 = new StringStack();
+        */
+        CustomStack myStack = new CustomStack();
+        //myStack
 
+        /*
+         TREE
 
-        //STACK
-        Stack stack = new Stack();
-        Stack stack1 = new StringStack();
+            JAVA
 
-        //TREE
+        */
 
     }
 }
